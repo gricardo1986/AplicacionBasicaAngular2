@@ -1,0 +1,13 @@
+<app-vote (voteEvent)="addVote($event)"></app-vote>
+
+<!-- voting.component.html -->
+<div *ngFor="let item of votes$ | async">
+    <div>
+      {{ item.name }} - Votos: {{ item.votes }}
+    </div>
+    <div>
+      <button (click)="addVote(item.name)">Votar a favor</button>
+      <button (click)="removeVote(item.name)">Votar en contra</button>
+    </div>
+</div>
+

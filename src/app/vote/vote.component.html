@@ -1,0 +1,6 @@
+<form [formGroup]="voteForm" (ngSubmit)="submitVote()">
+    <label for="voteOption">Opción de Voto:</label>
+    <input type="text" id="voteOption" formControlName="voteOption" />
+  
+    <button type="submit">Votar</button>
+</form>
